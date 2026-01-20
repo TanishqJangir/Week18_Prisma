@@ -2,13 +2,17 @@ import { PrismaClient } from "@prisma/client";
 
 const client = new PrismaClient();
 
-async function createUser(){
-    await client.users.create({
-        data:{
-            username: "Tanishq",
-            password: "123123"
+async function findSpecificDataOfUser(){
+    const response = await client.users.findFirst({
+        where:{
+            id : 2
+        },
+        select:{
+            username : true
         }
     })
+
+    console.log(response)
 }
 
-createUser();
+findSpecificDataOfUser()
