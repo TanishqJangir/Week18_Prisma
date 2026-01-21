@@ -2,7 +2,7 @@
   // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
     // File Layout
-    "rootDir": "./src",
+    "rootDir": "./",
     "outDir": "./dist",
 
     // Environment Settings
@@ -14,6 +14,8 @@
     // "lib": ["esnext"],
     // "types": ["node"],
     // and npm install -D @types/node
+ 
+
 
     // Other Outputs
     "sourceMap": true,
@@ -40,5 +42,9 @@
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
     "skipLibCheck": true,
-  }
+  },
+  //  "include": [
+  //   "src/**/*.ts",
+  //   "../prisma/seed.ts"
+  // ]
 }

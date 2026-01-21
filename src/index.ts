@@ -47,8 +47,12 @@ app.get("/users/:id", async (req, res) => {
     })
 
     res.json({
-        users
+        users : users,
+        id : users?.todos[0]?.userId
     })
 })
+
+
+
 
 app.listen(3000)
